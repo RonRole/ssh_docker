@@ -1,0 +1,9 @@
+version: '3'
+services:
+  ssh:
+    build: .
+    volumes:
+      - ./ssh/sshd_config:/etc/ssh/sshd_config
+    ports:
+      - "2222:22"
+    tty: true
